@@ -1,19 +1,19 @@
 import { Col, Pagination, Row } from "antd";
-import { DoctorService } from "../services/DoctorService";
+import React, { useState } from "react";
 import CardTitleAndValue from "./CardTitleAndValue";
-import docImage from "./../assets/images/doctorImage.jpeg";
-import { useState } from "react";
-import DoctorVerificationModel from "./DoctorVerificationModel";
+import centerImage from "./../assets/images/medical_center_logo.png";
+import { MedicalCenterService } from "../services/MedicalCenterService";
+import MedicalCenterVerificationModel from "./MedicalCenterVerificationModel";
 
-function DoctorVerificationBody() {
+function MedicalCenterVerificationBody() {
   const [modalOpen, setModalOpen] = useState(false);
-  const data = DoctorService.getSampleDoctorApplicationList();
+  const data = MedicalCenterService.getSampleMedicalCenterApplicationList();
   function cardHandler(id: string) {
     setModalOpen(true);
   }
   return (
     <div className="mt-4">
-      <DoctorVerificationModel
+      <MedicalCenterVerificationModel
         modalOpen={modalOpen}
         setModalOpen={setModalOpen}
       />
@@ -28,7 +28,7 @@ function DoctorVerificationBody() {
             >
               <div>
                 <img
-                  src={docImage}
+                  src={centerImage}
                   className="rounded-full object-cover w-24 h-24"
                   alt="Doctor Image"
                 />
@@ -51,4 +51,4 @@ function DoctorVerificationBody() {
   );
 }
 
-export default DoctorVerificationBody;
+export default MedicalCenterVerificationBody;
