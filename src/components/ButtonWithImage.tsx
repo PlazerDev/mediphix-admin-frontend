@@ -24,10 +24,10 @@ function ButtonWithImage({ title, style, img, to }: Props) {
       }}
       className={
         bgStyle +
-        " hover:cursor-pointer px-12 py-3 rounded-lg flex flex-col items-center gap-1"
+        " hover:cursor-pointer px-12 py-3 rounded-lg flex flex-col items-center gap-1 w-full h-full"
       }
     >
-      <img src={img} alt="Button Image" className="w-24 object-cover h-24" />
+      <img src={img} alt="Button Image" className="w-36 object-cover h-36" />
       <p className="font-medium text-white text-nowrap">{title}</p>
     </div>
   );

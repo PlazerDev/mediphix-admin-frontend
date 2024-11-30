@@ -21,16 +21,8 @@ const data = [
 
 function SessionChart() {
   return (
-    <ResponsiveContainer width="100%" height={300}>
-      <LineChart
-        data={data}
-        margin={{
-          top: 5,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
+    <ResponsiveContainer className=" bg-mediphix_card_background rounded-lg h-full">
+      <LineChart data={data} className="p-2">
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis
           dataKey="name"
@@ -44,7 +36,7 @@ function SessionChart() {
         <Line
           type="monotone"
           dataKey="sessions"
-          stroke="#8884d8"
+          stroke="#ff7300"
           activeDot={{ r: 8 }}
         />
       </LineChart>

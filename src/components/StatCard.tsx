@@ -7,9 +7,9 @@ interface Props {
 }
 function StatCard({ title, val }: Props) {
   return (
-    <div className="bg-mediphix_card_background w-full rounded-lg flex items-center justify-between">
-      <div className="flex flex-col p-4 items-start justify-start">
-        <p className="text-mediphix_text_b text-sm">{title}</p>
+    <div className="bg-mediphix_card_background w-full h-full ps-2 rounded-lg flex  justify-between gap-4">
+      <div className="flex flex-col items-start justify-center">
+        <p className="text-mediphix_text_b text-sm text-nowrap">{title}</p>
         <p className="font-bold text-3xl">
           <CountUp start={0} end={val} duration={3}></CountUp>
         </p>
@@ -18,7 +18,7 @@ function StatCard({ title, val }: Props) {
         <img
           src={patternImg}
           alt="Pattern Iamge"
-          className="h-24 mix-blend-luminosity"
+          className="h-full w-40 object-cover mix-blend-luminosity"
         />
       </div>
     </div>

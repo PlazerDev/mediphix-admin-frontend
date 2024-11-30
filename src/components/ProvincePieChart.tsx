@@ -2,15 +2,10 @@ import React, { useState } from "react";
 import { PieChart, Pie, Sector, ResponsiveContainer } from "recharts";
 
 const data = [
-  { name: "Central Province", value: 120 },
-  { name: "Eastern Province", value: 95 },
-  { name: "Northern Province", value: 80 },
-  { name: "North Western Province", value: 110 },
-  { name: "North Central Province", value: 70 },
-  { name: "Sabaragamuwa Province", value: 85 },
-  { name: "Southern Province", value: 140 },
-  { name: "Uva Province", value: 65 },
-  { name: "Western Province", value: 200 },
+  { name: "Medical Center Staff", value: 1322 },
+  { name: "Medical Center Receptionists", value: 560 },
+  { name: "Medical Center Administrators", value: 450 },
+  { name: "Medical Center Lab Staff", value: 186 },
 ];
 
 const renderActiveShape = (props: any) => {
@@ -73,7 +68,7 @@ const renderActiveShape = (props: any) => {
         y={ey}
         textAnchor={textAnchor}
         fill="#333"
-      >{`PV ${value}`}</text>
+      >{`No. of members ${value}`}</text>
       <text
         x={ex + (cos >= 0 ? 1 : -1) * 12}
         y={ey}
@@ -96,16 +91,16 @@ const ProvincePieChart: React.FC = () => {
 
   return (
     <ResponsiveContainer width="100%" height="100%">
-      <PieChart width={100} height={100}>
+      <PieChart className="bg-mediphix_card_background rounded-b-lg">
         <Pie
           activeIndex={activeIndex}
           activeShape={renderActiveShape}
           data={data}
           cx="50%"
           cy="50%"
-          innerRadius={60}
-          outerRadius={80}
-          fill="#8884d8"
+          innerRadius={90}
+          outerRadius={110}
+          fill="#ff7300"
           dataKey="value"
           onMouseEnter={onPieEnter}
         />
