@@ -53,7 +53,7 @@ function HomePage() {
                   title="Verify Medical Centers"
                   style={1}
                   img={hospitalImg}
-                  to=""
+                  to="verifyMedicalCenters"
                 />
               </div>
               <div className="flex-1  w-full flex items-center justify-center px-1">
