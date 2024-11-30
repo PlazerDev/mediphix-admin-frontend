@@ -14,7 +14,7 @@ function DoctorVerifyPage() {
     },
     {
       title: "Verify Doctors",
-      link: "/",
+      link: "",
     },
   ];
 
