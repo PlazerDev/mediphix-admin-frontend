@@ -4,6 +4,7 @@ import MainGreeting from "../components/MainGreeting";
 import Loading from "../components/Loading";
 import Footer from "../components/Footer";
 import SearchNHistory from "../components/SearchNHistory";
+import DoctorVerificationBody from "../components/DoctorVerificationBody";
 
 function DoctorVerifyPage() {
   const [loading, setLoading] = useState(false);
@@ -37,6 +38,7 @@ function DoctorVerifyPage() {
           {/* Main Body div */}
           <div className="w-ful">
             <SearchNHistory searchBarTitle="Search the doctor name here" />
+            <DoctorVerificationBody />
           </div>
         </div>
       )}

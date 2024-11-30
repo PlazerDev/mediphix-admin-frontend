@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar";
 import MainGreeting from "../components/MainGreeting";
 import Loading from "../components/Loading";
 import Footer from "../components/Footer";
+import SearchNHistory from "../components/SearchNHistory";
 
 function MedicalCenterVerifyPage() {
   const [loading, setLoading] = useState(false);
@@ -34,7 +35,9 @@ function MedicalCenterVerifyPage() {
             medicalCenterName="Mediphix"
           />
           {/* Main Body div */}
-          <div className="w-ful"></div>
+          <div className="w-ful">
+            <SearchNHistory searchBarTitle="Search the medical center name here" />
+          </div>
         </div>
       )}
 
